@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 static int j;
+int b[100];
 void fun1(void)
 {
 	static int i = 0;
@@ -11,7 +12,10 @@ void fun2(void)
 	j = 0;
 	j++;
 }
-
+void fun3(int b[])
+{
+	printf("---------%d\n", sizeof(b));
+}
 int main(int argc, char const *argv[])
 {
 	int m = 9;
@@ -26,8 +30,10 @@ int main(int argc, char const *argv[])
 
 		fun2();
 	}
+	fun3(b);
 	printf("%d\n", j);
-	printf("int: %u\n", sizeof(int));
+	int a[100];
+	printf("int: %u\n", sizeof(a));
 	printf("short:%d\n", sizeof(short));
 	printf("long:%d\n", sizeof(long));
 	printf("char:%d\n", sizeof(char));
