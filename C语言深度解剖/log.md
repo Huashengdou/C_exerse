@@ -6,5 +6,5 @@
 	- 请求编译器尽可能地将变量存在CPU内部寄存器中，而不是通过内存寻址访问提高效率。就是说不要让编译器优化以register修饰的变量。
 	- 注意，在实际编程的过程中是很少用到这个关键字的，我印象中好像就见过一次。
 	- 用register修饰的变量必须是能被CPU寄存器接受的类型，这就是说，register的变量必须是一个单个的值，并且其长度小于等于整形的。由于其不能存放在内存中，故不能用取址“&”运算符引用。
-	- 引用错误示例：![Aaron Swartz](raw.githubusercontent.com/Huashengdou/C_exerse/master/C%E8%AF%AD%E8%A8%80%E6%B7%B1%E5%BA%A6%E8%A7%A3%E5%89%96/%E5%BC%95%E7%94%A8register%E5%8F%98%E9%87%8F%E9%94%99%E8%AF%AF.jpg)
+	- 引用错误示例：![Aaron Swartz](https://raw.githubusercontent.com/Huashengdou/C_exerse/master/C%E8%AF%AD%E8%A8%80%E6%B7%B1%E5%BA%A6%E8%A7%A3%E5%89%96/%E5%BC%95%E7%94%A8register%E5%8F%98%E9%87%8F%E9%94%99%E8%AF%AF.jpg)
 	
