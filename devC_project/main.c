@@ -4,12 +4,13 @@
 
 void print()
 {
-	unsigned int _ebp;
+	 int _ebp = 0;
 	int i;
 	__asm(
-		"mov _ebp,ebp"
+		"movl %ebp,_ebp"
 	);
-	int *p = (int *)(*(int *)_ebp-4-4-4-7*4);
+	int *p = NULL;
+	p = (int *)((void *)_ebp-4-4-4-7*4);
 	for (i = 0; i<7; i++)
 	{
 		printf("%d\t", p[i]);
