@@ -1,4 +1,4 @@
-- 2018.11.28
+# 2018.11.28
 - 定义 && 声明
 	- 定义是创建对象，并为这个对象分配了内存
 	- 声明没有分配内存，仅仅是告诉文件该“名字”已经被占用
@@ -8,4 +8,6 @@
 	- 用register修饰的变量必须是能被CPU寄存器接受的类型，这就是说，register的变量必须是一个单个的值，并且其长度小于等于整形的。由于其不能存放在内存中，故不能用取址“&”运算符引用。
 	- 引用错误示例：![Aaron Swartz](https://raw.githubusercontent.com/Huashengdou/C_exerse/master/C%E8%AF%AD%E8%A8%80%E6%B7%B1%E5%BA%A6%E8%A7%A3%E5%89%96/%E5%BC%95%E7%94%A8register%E5%8F%98%E9%87%8F%E9%94%99%E8%AF%AF.jpg)
 	
-	
+# 2018.11.29
+- signed和unsigned关键字的表示范围
+	- 计算机内数的表示方法是按照补码进行的。
