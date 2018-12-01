@@ -24,5 +24,19 @@ int main(int argc, char const *argv[])
 		}
 		printf("\n");
 	}
+
+	printf("\n使用指针数组方式访问二维数组arr:\n");
+	for (i=0; i<4; ++i)
+	{
+		p2[i] = arr[i]
+	}
+	for (k=0; k<4; ++k)
+	{
+		for (j=0; j<4; ++j)
+		{
+			printf("arr[%d][%d] = %d\t\n", i, j, *(p2[k]+j));
+		}
+		printf("\n");
+	}
 	return 0;
 }
