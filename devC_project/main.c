@@ -6,13 +6,14 @@
 void print()
 {
 	unsigned int _ebp;
-	int i;
+
 	/*__asm(
 		"mov _ebp,ebp"
 	);*/
 	__asm__ __volatile__ ("movl %%ebp, %0":"=a"(_ebp));
 	int *p = NULL;
 	p = (int *)(*(int *)_ebp-4-4-4-7*4-8);
+	int i;
 	for (i = 0; i<7; i++)
 	{
 		printf("%d\t", p[i]);
