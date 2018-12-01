@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
 	printf("\n使用指针数组方式访问二维数组arr:\n");
 	for (i=0; i<4; ++i)
 	{
-		p2[i] = arr[i]
+		p2[i] = arr[i];
 	}
 	for (k=0; k<4; ++k)
 	{
