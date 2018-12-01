@@ -7,8 +7,8 @@ int main(int argc, char const *argv[])
 	//程序起始时间
 	gettimeofday(&start, NULL);
 	double timeuse;
-	register double sum;
-	register int i,k;
+	double sum;
+	int i,k;
 	for (i = 0; i < 1000000000; ++i)
 	{
 		for (k=0; k<10; k++)

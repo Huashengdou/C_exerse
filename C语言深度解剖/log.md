@@ -8,7 +8,7 @@
 	- 用register修饰的变量必须是能被CPU寄存器接受的类型，这就是说，register的变量必须是一个单个的值，并且其长度小于等于整形的。由于其不能存放在内存中，故不能用取址“&”运算符引用。
 	- 引用错误示例：![Aaron Swartz](https://raw.githubusercontent.com/Huashengdou/C_exerse/master/C%E8%AF%AD%E8%A8%80%E6%B7%B1%E5%BA%A6%E8%A7%A3%E5%89%96/%E5%BC%95%E7%94%A8register%E5%8F%98%E9%87%8F%E9%94%99%E8%AF%AF.jpg)
 	- 只有局部变量才能使用此关键字。
-	- 测试使用register和不使用register的执行效率，见register.c
+	- 测试使用register和不使用register的执行效率，见no_register.c和register.c
 	
 # 2018.11.29
 - signed和unsigned关键字的表示范围
