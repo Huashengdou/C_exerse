@@ -1,9 +1,8 @@
 /*堆栈练习题*/
 /*在不传递参数的情况下，在print函数中打印出main函数中数组的元素*/
 #include <stdio.h>
-#include <stdlib.h>
-
-void print()
+#include "print.h"
+void printt()
 {
 	unsigned int _ebp;
 
@@ -27,7 +26,8 @@ int main(int argc, char const *argv[])
 	char c = 'c';
 	int arr[] = {11,12,13,14,15,16,17};
 
+	printt();
 	print();
-	printf("sizeof(int)%d\n",sizeof(long long));
+//	printf("sizeof(int)%d\n",sizeof(long long));
 	return 0;
 }
