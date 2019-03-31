@@ -11,3 +11,16 @@
 	- set var：修改变量的值
 	- start：开始执行程序，停在main函数第一行语句前面
 	- step(s):执行下一行语句，如果有函数调用则进入到函数中
+
+- 断点命令
+	- break(b) 行号(函数名):在某一行或者某一个函数处设立断点
+	- break···if···：设置断点的执行条件
+	- continue(c):从当前位置开始连续而非单步执行程序
+	- delete breakpoints:删除断点
+	- display 变量名:跟踪查看一个变量，每次停下来都显示它的值
+	- disable breakpoints：禁用断点
+	- enable breakpoints:启用断点
+	- info(i) breakpoints：查看当前设置的断点
+	- run(r):从头开始连续执行程序
+	- undisplay:取消先前对设置的那些变量的跟踪
+
