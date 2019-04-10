@@ -1,10 +1,14 @@
 # 典型的hello文件的Makefile文件
+# 链接
 hello:hello.o
 	gcc hello.o -o hello
+# 编译
 hello.o:hello.s
 	gcc -c hello.s -o hello.o
+# 汇编
 hello.s:hello.i
 	gcc -S hello.i -o hello.s
+# 链接
 hello.i:hello.c hello.h
 	gcc -E hello.c > hello.i
 .PHONY:clean
