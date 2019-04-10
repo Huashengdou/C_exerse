@@ -1,0 +1,13 @@
+OBJS=main.o add.o
+CC=gcc
+CFLAGS= -Wall -O -g
+
+add:$(OBJS)
+	$(CC) $(OBJS) -o add
+main.o:main.c
+	$(CC) $(CFLAGS) -c main.c -o main.o
+add.o:add.c
+	$(CC) $(CFLAGS) -c add.c -o add.o
+clean:
+	rm *.o
+
