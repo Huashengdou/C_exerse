@@ -53,6 +53,7 @@ int main(int argc, char const *argv[])
 				break;
 
 			case 'p':
+			/*因为p未生命为带参数，所以optarg一直为NULL*/
 				printf("第三个参数'短p'或者'长priority',全局变量：%s\n", optarg);
 				break;
 
