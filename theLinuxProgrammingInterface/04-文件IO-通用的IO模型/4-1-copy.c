@@ -10,7 +10,7 @@
 /*包含文件操作的函数*/
 #include <fcntl.h>
 /*包含书中提供的头文件（该同文件包含一些标准操作）*/
-#include "../lib/tlpi_hdr.h"
+#include "tlpi_hdr.h"
 
 /*定义缓存区大小*/
 #ifndef BUF_SIZE
@@ -54,10 +54,12 @@ int main(int argc, char const *argv[])
 	*S_IWOTH，其他用户拥有写权限；
 	*S_IXOTH，其他用户拥有执行权限；
 	*正好就是Linux中指定的文件权限
+	*直接通过fliePerms设置文件权限并不生效，还要参考系统的umask值，该文件权限是filePerms & (~umask)
+	*可通过函数umask()设置该参数，当用程序生成的权限为参考时，可将umask值设置为0
+	*命令行也是umask
 	*/
 	/*文件权限：rw-rw-rw-*/
-	filePerms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP |\
-				S_IROTH | S_IWOTH;
+	filePerms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH;
 
 	/*打开或创建要写入的文件*/
 	outputFd = open(argv[2], openFlags, filePerms);
@@ -71,6 +73,7 @@ int main(int argc, char const *argv[])
 	{
 		if (write(outputFd, buf, numRead) != numRead)
 		{
+			printf("numRead = %d\n", numRead);
 			fatal("could't write whole buffer");
 		}
 	}
