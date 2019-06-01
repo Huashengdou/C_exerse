@@ -45,4 +45,8 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 
+/*运行输出*/
+yanjy@ubuntu:/mnt/hgfs/ubuntu_share/examples$ ./a.out 
+errno: 2, 错误信息：No such file or directory
+yanjy@ubuntu:/mnt/hgfs/ubuntu_share/examples$ 
 ```
